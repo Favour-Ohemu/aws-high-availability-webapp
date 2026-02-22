@@ -95,7 +95,7 @@ The system is designed using four layers that work together:
 ![CloudWatch Dashboard](screenshots/cloudwatch-dashboard.png)
 
 
-## Problems I Solved
+## Problems Encountered
 
 **Problem 1: Website Wouldn't Load**
 
@@ -137,6 +137,7 @@ WebServer-2 was flagged as unhealthy even though Apache was running normally. Th
 
 * `user-data.sh` - Bootstrap script for automatic server configuration
 * `screenshots/` - Architecture diagram and testing evidence
+
 
 
 
