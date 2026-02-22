@@ -1,0 +1,7 @@
+#!/bin/bash
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+echo "<html><body style='font-family:Arial; background:#667eea; color:white; padding:50px;'><h1>High-Availability Web Application</h1><p><strong>Server:</strong> WebServer-1</p><p><strong>Status:</strong> Online and Healthy</p></body></html>" > /var/www/html/index.html
+echo "<html><body><h1>OK</h1></body></html>" > /var/www/html/health.html
