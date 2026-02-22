@@ -90,7 +90,7 @@ The system is designed using four layers that work together:
 - Dashboard updates every 60 seconds
 - Automatic email alert and alarm resolution when fixed
 
-![Email Alert](screenshots/email-notification.png)
+![Email Alert](screenshots/email-notification.jpg)
 
 ![CloudWatch Dashboard](screenshots/cloudwatch-dashboard.png)
 
@@ -137,6 +137,7 @@ WebServer-2 was flagged as unhealthy even though Apache was running normally. Th
 
 * `user-data.sh` - Bootstrap script for automatic server configuration
 * `screenshots/` - Architecture diagram and testing evidence
+
 
 
 
