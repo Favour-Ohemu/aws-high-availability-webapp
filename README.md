@@ -2,34 +2,23 @@
 
 This project demonstrates how to build highly available web infrastructure that solves four critical business problems: downtime, security breaches, scalability issues, and disaster recovery failures.
 
-## Problem Solved
-
-Businesses face four critical challenges that cost millions annually:
-
-1. **Downtime** - Website crashes cost $5,600 per hour (Gartner)
-2. **Security** - Data breaches cost average $4.45M (IBM 2023)
-3. **Scalability** - Servers crash during traffic spikes, losing 60-80% of sales
-4. **Disaster Recovery** - Ransomware with no backups forces businesses to close
-
-This infrastructure prevents all four.
-
 ## What I Built
 
 ![Architecture Diagram](screenshots/architecture-diagram.png)
 
-- **Application Load Balancer**
+- **Application Load Balancer**:
 Checks server health every 30 seconds, routes traffic only to healthy servers, and automatically fails over to backup servers when needed.
 
-- **Auto Scaling Group**
+- **Auto Scaling Group**:
 Automatically replaces failed servers within 3 minutes, scales from 2 to 4 instances during traffic spikes, and scales down during low traffic to reduce costs.
 
-- **Security Architecture**
+- **Security Architecture**:
 Uses IAM roles instead of passwords or SSH keys, blocks access with security groups to keep servers hidden from direct internet exposure, and protects data at rest with encrypted EBS storage.
 
-- **Disaster Recovery System**
+- **Disaster Recovery System**:
 Performs automated daily backups with a 7-day retention policy, enabling the entire system to be rebuilt within 15 minutes from snapshots and protecting against ransomware, accidental deletion, and data corruption.
 
-- **CloudWatch Monitoring**
+- **CloudWatch Monitoring**:
 Provides a real-time dashboard for tracking server health and traffic, with email alerts for high CPU usage that trigger scaling, failed servers requiring immediate attention, and low traffic conditions for cost optimization.
 
 ## Architecture
@@ -137,6 +126,7 @@ WebServer-2 was flagged as unhealthy even though Apache was running normally. Th
 
 * `user-data.sh` - Bootstrap script for automatic server configuration
 * `screenshots/` - Architecture diagram and testing evidence
+
 
 
 
